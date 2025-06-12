@@ -92,7 +92,11 @@
       const answer = form[`q${i}`].value;
       score += parseInt(answer);
     }
+    
     document.getElementById('result').textContent = `درجتك: ${score} من 5`;
+    const inputs = form.querySelectorAll('input[type=radio]');
+    inputs.forEach(input => input.disabled = true);
+    
   }
 </script>
 </body>
